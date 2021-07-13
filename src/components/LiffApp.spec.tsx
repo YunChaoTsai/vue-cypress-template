@@ -16,7 +16,7 @@ describe("HelloWorld", () => {
     const msg = "My liff id: 1585775582-lXPkeW6G";
 
     // 使用 import { defineComponent } from 'vue'; 時， propsData 會出現 typing 抱錯
-    mount(LiffApp, {
+    mount(<LiffApp />, {
       props: {
         liffId: "1585775582-lXPkeW6G",
       },
@@ -28,7 +28,7 @@ describe("HelloWorld", () => {
   it("should call liff init", () => {
     cy.stub(liff, 'init').as('liffInitSuccess').resolves();
 
-    mount(LiffApp, {
+    mount(<LiffApp />, {
       props: {
         liffId: "1585775582-lXPkeW6G",
       },
