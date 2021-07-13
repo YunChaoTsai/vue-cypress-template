@@ -8,7 +8,7 @@ describe('HelloWorld', () => {
 
     // 使用 import { defineComponent } from 'vue'; 時， propsData 會出現 typing 抱錯
     mount(HelloWorld, {
-      propsData: {
+      props: {
         msg
       }
     })
